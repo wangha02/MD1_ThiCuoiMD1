@@ -1,0 +1,108 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<p id="validate"></p>-->
+<!--<input id="newCategory" type="text">-->
+<!--<button onclick="createCategory()">CreateCategory</button>-->
+<!--<table border="1">-->
+<!--  <th>STT</th>-->
+<!--  <th>THỂ LOẠI</th>-->
+<!--  <th>EDIT</th>-->
+<!--  <th>DELETE</th>-->
+<!--  <tbody id="drawTable">-->
+<!--</table>-->
+<!--<p>Name Song:</p>-->
+<!--<input type="text">-->
+<!--<p>Lyrics</p>-->
+<!--<textarea style="width: 200px ; height: 100px"></textarea>-->
+<!--<select>-->
+<!--  <option> nhạc đỏ</option>-->
+<!--  <option> nhạc vàng</option>-->
+<!--  <option>nhạc trẻ</option>-->
+<!--  <option>nhạc rock</option>-->
+<!--</select> <br>-->
+<!--<button>create Song</button>-->
+<!--<script>-->
+<!--  class Category {-->
+<!--    id;-->
+<!--    name;-->
+<!--    constructor(id,name) {-->
+<!--      this.id = id;-->
+<!--      this.name = name;-->
+<!--    }-->
+<!--    getId(){-->
+<!--      return this.id;-->
+<!--    }-->
+<!--    setId(id){-->
+<!--      this.id = id;-->
+<!--    }-->
+<!--    getName(){-->
+<!--      return this.name;-->
+<!--    }-->
+<!--    setName(name){-->
+<!--      this.name = name;-->
+<!--    }-->
+<!--  }-->
+<!--  let listCategory = [];-->
+<!--  let category1 = new Category(1,'nhạc đỏ')-->
+<!--  let category2 = new Category(2,'nhạc vàng')-->
+<!--  let category3 = new Category(3,'nhạc trẻ')-->
+<!--  let category4 = new Category(4,'rock')-->
+
+<!--  listCategory.push(category1,category2,category3,category4);-->
+
+<!--  function showListCategory() {-->
+<!--    let drawTable = '';-->
+<!--    let class_tr = '';-->
+
+<!--    for (let i = 0; i < listCategory.length; i++) {-->
+<!--      drawTable += `<tr class="${class_tr}">-->
+<!--                      <td>${listCategory[i].id}</td>-->
+<!--                      <td>${listCategory[i].name}</td>-->
+<!--                      <td><button onclick="updateCategory(${listCategory[i].id})">EDIT</button></td>-->
+<!--                      <td><button onclick="deleteCategory(${listCategory[i].id})">DELETE</button></td>-->
+
+<!--</tr>`-->
+<!--    }-->
+<!--    document.getElementById('drawTable').innerHTML = drawTable;-->
+<!--  }-->
+<!--  showListCategory();-->
+
+<!--  function createCategory(){-->
+<!--    let newCategory = document.getElementById('newCategory').value-->
+<!--    if (newCategory.trim()===''){-->
+<!--      document.getElementById('validate').innerHTML='<span style="color: red">không được để trống</span>'-->
+<!--    }else {-->
+<!--      listCategory.push(new Category(listCategory.length +1,newCategory));-->
+<!--      document.getElementById('validate').innerHTML = '<span style="color: green">create success</span>'-->
+<!--    }-->
+<!--    showListCategory();-->
+<!--  }-->
+
+<!--  function updateCategory(id) {-->
+<!--    for (let i = 0; i < listCategory.length; i++) {-->
+<!--      if (listCategory[i].id==id){-->
+<!--        let editCategory = prompt('editCategory: ',listCategory[i].name)-->
+<!--        listCategory[i].setName(editCategory)-->
+<!--      }-->
+<!--    }-->
+<!--    showListCategory();-->
+<!--  }-->
+
+<!--  function deleteCategory(id) {-->
+<!--    for (let i = 0; i < listCategory.length; i++) {-->
+<!--      if (listCategory[i].id===id){-->
+<!--        listCategory.splice(listCategory[i],1)-->
+<!--        break;-->
+<!--      }-->
+<!--    }-->
+<!--    showListCategory();-->
+<!--  }-->
+
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
